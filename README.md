@@ -1,4 +1,4 @@
-# CodewarsSolutionsOf-8th
+# My first steps in Java
 
 [Two fighters, one winner.](https://www.codewars.com/kata/577bd8d4ae2807c64b00045b/train/java)
 
