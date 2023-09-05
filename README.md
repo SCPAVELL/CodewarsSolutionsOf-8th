@@ -20,12 +20,10 @@
 			return fighter1.name;
 		}
 
-	}
- }
+	} }
  
 [Small enough? - Beginner](https://www.codewars.com/kata/57cc981a58da9e302a000214/train/java)
 
-  public static boolean smallEnough(int[] a, int limit){
+  	static boolean smallEnough(int[] a, int limit){
     Arrays.sort(a);
-    return a[a.length-1] <= limit;
-  }
+    return a[a.length-1] <= limit;}
