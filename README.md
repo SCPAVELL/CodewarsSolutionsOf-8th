@@ -43,3 +43,14 @@
 			sum += nums[i];
 		}
 		return sum / nums.length;}
+
+[The Supermarket Queue](https://www.codewars.com/kata/57b06f90e298a7b53d000a86/solutions/java)
+
+	static int solveSuperMarketQueue(int[] customers, int n) {
+		int[] result = new int[n];
+		  for(int i = 0; i < customers.length; i++){
+	    	result[0] += customers[i];
+	    	Arrays.sort(result);
+	    }
+		  return result[n-1];}
+  
