@@ -27,3 +27,9 @@
   	static boolean smallEnough(int[] a, int limit){
     Arrays.sort(a);
     return a[a.length-1] <= limit;}
+
+
+[Grasshopper - Check for factor](https://www.codewars.com/kata/55cbc3586671f6aa070000fb/train/java)
+
+static boolean checkForFactor(int base, int factor) {
+        return base % factor == 0;}
