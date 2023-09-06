@@ -31,5 +31,15 @@
 
 [Grasshopper - Check for factor](https://www.codewars.com/kata/55cbc3586671f6aa070000fb/train/java)
 
-static boolean checkForFactor(int base, int factor) {
+	static boolean checkForFactor(int base, int factor) {
         return base % factor == 0;}
+
+
+ [Grasshopper - Array Mean](https://www.codewars.com/kata/55d277882e139d0b6000005d/train/java)
+
+	static int findAverage(int[] nums) {
+		int sum = 0;
+		for (int i = 0; i < nums.length; i++) {
+			sum += nums[i];
+		}
+		return sum / nums.length;}
