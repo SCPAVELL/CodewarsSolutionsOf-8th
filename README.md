@@ -96,4 +96,11 @@
 			return Math.PI * Math.pow(radius, 2);
 		} else {
 			throw new IllegalArgumentException();}}
+
+[Greet Me](https://www.codewars.com/kata/535474308bb336c9980006f2/train/java)
+
+ 	static String greet(String name) {
+		String print = name.toLowerCase();
+		return "Hello " + print.substring(0, 1).toUpperCase() + print.substring(1) + "!";}
+   
   
