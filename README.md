@@ -86,5 +86,14 @@
   [The Wide-Mouthed frog!](https://www.codewars.com/kata/57ec8bd8f670e9a47a000f89/solutions/java)
 
   	static String mouthSize(String animal) {
-    return animal.equalsIgnoreCase("alligator") ? "small" : "wide";  }
+    	return animal.equalsIgnoreCase("alligator") ? "small" : "wide";  }
+
+
+[Area of a Circle](https://www.codewars.com/kata/537baa6f8f4b300b5900106c/train/java)
+
+    	static double area(double radius) {
+		if (radius > 0) {
+			return Math.PI * Math.pow(radius, 2);
+		} else {
+			throw new IllegalArgumentException();}}
   
