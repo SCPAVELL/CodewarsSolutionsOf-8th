@@ -109,4 +109,19 @@
 	static long findNextSquare(long sq) {
 		long root = (long) Math.sqrt(sq);
 		return root * root == sq ? (root + 1) * (root + 1) : -1;}
+
+
+  [Most digits](https://www.codewars.com/kata/58daa7617332e59593000006/solutions/java)
+
+  	static int findLongest(int[] numbers) {
+		int max = 0, nb = 0;
+	    for (int i = 0; i < numbers.length; i++) {
+	      int n = Math.abs(numbers[i]);
+	      int nbDig = String.valueOf(n).length();
+	      if (nbDig > max) {
+	        max = nbDig;
+	        nb = numbers[i];
+	      }
+	    }
+	    return nb;}
   
