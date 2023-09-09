@@ -133,4 +133,10 @@
 		for (int i = 0; i < passed.length / 2; i++)
 			min += passed[i] * passed[passed.length - 1 - i];
 		return min;}
+
+  [Break camelCase](https://www.codewars.com/kata/5208f99aee097e6552000148/train/java)
+
+  	static String camelCase(String input) {
+		String[] r = input.split("(?=\\p{Upper})");
+		return (String.join(" ", r));}
   
