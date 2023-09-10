@@ -181,4 +181,23 @@
 	                .max()
 	                .getAsInt(); }
 
+[Persistent Bugger.](https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec/train/java)
+
+	static int persistence(long n) {
+		int count = 0;
+		while (n >= 10) {
+			n = getMultiplyOfDigits(n);
+			count++;
+		}
+		return count;
+	}
+
+	public static long getMultiplyOfDigits(long n) {
+		int result = (int) n % 10;
+
+		while ((n /= 10) > 0) {
+			result *= n % 10;
+		}
+		return result;}
+
   
