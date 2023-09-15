@@ -283,5 +283,18 @@
 			result[i] = i + min;
 		}
 		return result;}
+
+  [Sum of Odd Cubed Numbers](https://www.codewars.com/kata/580dda86c40fa6c45f00028a/train/java)
+
+  	public static int cubeOdd(int arr[]) {
+		int rv = 0;
+		int count = 0;
+		for (int i = 0; i < arr.length; i++) {
+			rv = (int) Math.pow(arr[i], 3);
+			if (rv % 2 != 0) {
+				count += rv;
+			}
+		}
+		return count;}}
   
   
