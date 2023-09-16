@@ -301,7 +301,20 @@
 [Filter the number](https://www.codewars.com/kata/55b051fac50a3292a9000025/train/java)
 	
  	public static long filterString(final String value) {
-        	return Long.parseLong(value.replaceAll("[^0-9]", ""));   }
+        	return Long.parseLong(value.replaceAll("[^0-9]", ""));}
+
+
+[Stringy Strings](https://www.codewars.com/kata/563b74ddd19a3ad462000054)
+
+	public static String stringy(int size) {
+		int last = 1;
+		StringBuilder sb = new StringBuilder();
+
+		for (int i = 0; i < size; i++) {
+			sb.append(last);
+			last = last == 0 ? 1 : 0;
+		}
+		return sb.toString();}
 
   
   
