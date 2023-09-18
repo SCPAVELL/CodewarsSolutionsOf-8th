@@ -327,3 +327,9 @@
 
   
   
+[max diff - easy](https://www.codewars.com/kata/588a3c3ef0fbc9c8e1000095/train/java)
+
+	public static int maxDiff(int[] lst) {
+	    if (lst.length<2) return 0;
+	    java.util.Arrays.sort(lst);
+	    return lst[lst.length-1] - lst[0];  }
