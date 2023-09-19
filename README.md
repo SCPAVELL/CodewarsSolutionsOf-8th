@@ -333,3 +333,16 @@
 	    if (lst.length<2) return 0;
 	    java.util.Arrays.sort(lst);
 	    return lst[lst.length-1] - lst[0];  }
+
+
+[Equal Sides Of An Array](https://www.codewars.com/kata/5679aa472b8f57fb8c000047/train/java)
+
+	public static int findEvenIndex(int[] arr) {
+	   int sum = 0, cSum = 0;
+	    for (int i = 0; i < arr.length; i++) sum += arr[i];
+	    for(int i = 0; i < arr.length; i++){
+	      if (cSum == sum - arr[i]) return i;
+	      cSum += arr[i];
+	      sum -= arr[i];
+	    }
+	    return -1; }
