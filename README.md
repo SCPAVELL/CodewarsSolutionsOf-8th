@@ -346,3 +346,12 @@
 	      sum -= arr[i];
 	    }
 	    return -1; }
+
+
+[Grasshopper - Summation](https://www.codewars.com/kata/55d24f55d7dd296eb9000030/train/java)
+	public static int summation(int n) {
+            int runningTotal = 0;
+            for (int i=1; i<=n; i++){ 
+		runningTotal += i;
+ 		}
+        return runningTotal; }
