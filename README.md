@@ -349,9 +349,23 @@
 
 
 [Grasshopper - Summation](https://www.codewars.com/kata/55d24f55d7dd296eb9000030/train/java)
+
 	public static int summation(int n) {
             int runningTotal = 0;
             for (int i=1; i<=n; i++){ 
 		runningTotal += i;
  		}
         return runningTotal; }
+
+
+ 
+[Training JS #7: if..else and ternary operator](https://www.codewars.com/kata/57202aefe8d6c514300001fd/train/java)
+
+	public static int saleHotdogs(final int n) {
+		if (n < 5) {
+			return n * 100;
+		} else if (n >= 5 && n < 10) {
+			return n * 95;
+		} else {
+			return n * 90;}}
+
