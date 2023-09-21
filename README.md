@@ -369,3 +369,14 @@
 		} else {
 			return n * 90;}}
 
+
+[Dashatize it](https://www.codewars.com/kata/58223370aef9fc03fd000071/train/java)
+	
+ 	public static String dashatize(int num) {
+		return String.valueOf(num)
+				.replace("([13579])", "-$1-")
+				.replace("--", "-")
+				.replace("^-|-$", "");  }
+   
+
+
