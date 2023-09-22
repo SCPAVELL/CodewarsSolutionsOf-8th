@@ -377,6 +377,14 @@
 				.replace("([13579])", "-$1-")
 				.replace("--", "-")
 				.replace("^-|-$", "");  }
+
+
+[Tidy Number (Special Numbers Series #9)](https://www.codewars.com/kata/5a87449ab1710171300000fd/train/java)
+	
+ 	public static boolean tidyNumber(int number) {
+		int[] n = String.valueOf(number).chars().toArray();
+		return IntStream.range(0, n.length - 1).allMatch(i -> n[i] - n[i + 1] <= 0);}	
+ 	
    
 
 
