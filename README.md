@@ -391,5 +391,23 @@
 	public static boolean isLockNessMonster(String s) {
 		return s.contains("tree fiddy") || s.contains("3.50") || s.contains("three fifty");
 	}
+
+ [A Rule of Divisibility by 13](https://www.codewars.com/kata/564057bc348c7200bd0000ff/solutions/java)
+
+ 	public static long thirt(long n) {
+		int[] numbers = { 1, 10, 9, 12, 3, 4 };
+		while (n > 99) {
+			long nr = 0;
+			int i = 0;
+			while (n > 0) {
+				nr += n % 10 * numbers[i++ % 6];
+				n /= 10;
+			}
+			n = nr;
+		}
+		return n;
+	}
+
+	
 	
 
