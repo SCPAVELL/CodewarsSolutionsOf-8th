@@ -386,5 +386,10 @@
 		return IntStream.range(0, n.length - 1).allMatch(i -> n[i] - n[i + 1] <= 0);}	
  	
    
+[A Strange Trip to the Market](https://www.codewars.com/kata/55ccdf1512938ce3ac000056/solutions/java)
 
+	public static boolean isLockNessMonster(String s) {
+		return s.contains("tree fiddy") || s.contains("3.50") || s.contains("three fifty");
+	}
+	
 
