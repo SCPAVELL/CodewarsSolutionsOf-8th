@@ -408,6 +408,20 @@
 		return n;
 	}
 
+
+
+ [Automorphic Number (Special Numbers Series #6)](https://www.codewars.com/kata/5a58d889880385c2f40000aa/solutions/java)
+
+ 	public static String autoMorphic(int number) {
+		int square = number * number;
+		while (number > 0) {
+			if (number % 10 != square % 10) {
+				return "Not!!";
+			}
+			number /= 10;
+			square /= 10;
+		}
+		return "Automorphic";}
 	
 	
 
