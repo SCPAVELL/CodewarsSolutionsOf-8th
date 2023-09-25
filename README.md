@@ -430,6 +430,15 @@
 		return str.endsWith(ending);
 	}
 
+
+  [Exes and Ohs](https://www.codewars.com/kata/55908aad6620c066bc00002a/train/java)
+
+  	public static boolean getXO (String str) {
+	    int exCount = (int) str.chars().mapToObj(c -> (char) c).filter(a -> Character.toLowerCase(a) == 'x').count();
+	    int ohCount = (int) str.chars().mapToObj(c -> (char) c).filter(a -> Character.toLowerCase(a) == 'o').count();
+	    return exCount == ohCount;  
+     }
+
 	
 	
 
