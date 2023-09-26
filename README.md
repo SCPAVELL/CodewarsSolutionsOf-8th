@@ -439,6 +439,13 @@
 	    return exCount == ohCount;  
      }
 
+[Strong Number (Special Numbers Series #2)](https://www.codewars.com/kata/5a4d303f880385399b000001/train/java)
+
+	public static String isStrongNumber(int num) {
+	       return String.valueOf(num).chars()
+	                .map(i-> IntStream.range(1, i-'0'+1).reduce(1, (p, v)->p*v))
+	                .sum() == num ? "STRONG!!!!" : "Not Strong !!";
+	    }
 	
 	
 
