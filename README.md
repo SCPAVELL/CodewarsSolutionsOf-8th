@@ -446,6 +446,22 @@
 	                .map(i-> IntStream.range(1, i-'0'+1).reduce(1, (p, v)->p*v))
 	                .sum() == num ? "STRONG!!!!" : "Not Strong !!";
 	    }
+
+
+[Going to the cinema](https://www.codewars.com/kata/562f91ff6a8b77dfe900006e/train/java)
+
+	public static int movie(int card, int ticket, double perc) {
+        int i = 0;
+        double system1 = 0;
+        double system2 = card;
+        while (Math.ceil(system2) >= system1) {
+            i++;
+            system1 += ticket;
+            system2 += ticket * Math.pow(perc, visits);
+        }
+        return visits;
+    }
+
 	
 	
 
