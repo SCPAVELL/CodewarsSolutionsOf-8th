@@ -487,6 +487,19 @@
 		 return triple[0] * triple[0] + triple[1] * triple[1] == triple[2] * triple[2] ? 1 : 0;    
 	}
 
+[Maximum Triplet Sum (Array Series #7)](https://www.codewars.com/kata/5aa1bcda373c2eb596000112/solutions/java)
+
+ 	public static int maxTriSum(int[] numbers) {
+		Set<Integer> set = new HashSet<>();
+		for (int i = 0; i < numbers.length; i++) {
+			set.add(numbers[i]);
+		}
+		Optional<Integer> sumSet = set.stream().sorted(Comparator.reverseOrder()).limit(3).reduce((a, b) -> a + b);
+		set.stream().sorted(Comparator.reverseOrder()).limit(3).forEach(System.out::println);
+		return sumSet.isPresent() ? sumSet.get() : 0;
+	}
+
+
 
 
 	
