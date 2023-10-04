@@ -499,6 +499,89 @@
 		return sumSet.isPresent() ? sumSet.get() : 0;
 	}
 
+[Help the bookseller !](https://www.codewars.com/kata/54dc6f5a224c26032800005c/train/java)
+
+  	public static String stockSummary(String[] lstOfArt, String[] lstOf1stLetter) {
+		String result = "";
+		int count = 0;
+		boolean emptyResult = true;
+		for (String letter : lstOf1stLetter) {
+			int sum = 0;
+			for (String art : lstOfArt) {
+				String[] artArray = art.split(" ");
+				String title = artArray[0];
+				int price = Integer.parseInt(artArray[1]);
+
+				if (title.startsWith(letter)) {
+					sum += price;
+				}
+			}
+
+			if (sum > 0)
+				emptyResult = false;
+
+			result += String.format("(%s : %d)", letter, sum);
+			count++;
+			if (count < lstOf1stLetter.length && result.length() > 0)
+				result += " - ";
+		}
+		return emptyResult ? "" : result;
+	}
+
+	// Abbe's solution
+	private static class Book {
+		public final String category;
+		public final String code;
+		public final int quantity;
+
+		public Book(String label) {
+			category = label.substring(0,1);
+			code = label.split(" ")[0].substring(1);
+			quantity = Integer.parseInt(label.split(" ")[1]);
+		}
+	}
+
+	public static String otherStockSummary1(String[] lstOfArt, String[] lstOf1stLetter) {
+		if (lstOfArt.length == 0 || lstOf1stLetter.length == 0)
+			return "";
+		Map<String, Integer> categoryCounts = Arrays.stream(lstOfArt)
+				.map(Book::new)
+				.collect(Collectors.groupingBy(book -> book.category, Collectors.summingInt(book -> book.quantity)));
+		return Arrays.stream(lstOf1stLetter)
+				.map(initial -> String.format("(%s : %d)",
+						initial, categoryCounts.getOrDefault(initial, 0)))
+				.collect(Collectors.joining(" - "));
+	}
+
+	// mstream's solution
+	public static String otherStockSummary2(String[] lstOfArt, String[] lstOf1stLetter) {
+		if (lstOfArt.length == 0 || lstOf1stLetter.length == 0) {
+			return "";
+		}
+		Map<String, Integer> map = new HashMap(lstOf1stLetter.length);
+		for (String book : lstOfArt) {
+			String category = book.substring(0, 1);
+			Integer quantity = Integer.valueOf(book.substring(book.indexOf(" ") + 1));
+			if (!map.containsKey(category)) {
+				map.put(category, quantity);
+			} else {
+				map.put(category, quantity + map.get(category));
+			}
+		}
+		StringBuilder sb = new StringBuilder();
+		Iterator<String> it = Arrays.asList(lstOf1stLetter).iterator();
+		while(it.hasNext()) {
+			String category = it.next();
+			int quantity = map.containsKey(category) ? map.get(category) : 0;
+			sb.append(String.format("(%s : %d)", category, quantity));
+			if (it.hasNext()) {
+				sb.append(" - ");
+			}
+		}
+		return sb.toString();
+	}
+
+
 
 
 
