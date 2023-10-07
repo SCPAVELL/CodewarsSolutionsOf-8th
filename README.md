@@ -604,6 +604,23 @@
 		return print + "x^" + i;
 	}
 
+ [longest_palindrome](https://www.codewars.com/kata/54bb6f887e5a80180900046b/solutions)
+
+ 	public static int longestPalindrome(final String s) {
+		int max = 0, slen = s.length();
+		for (int len = slen; len > max; len--) {
+			for (int i = 0; i + len <= slen; i++) {
+				String sub = s.substring(i, i + len);
+				if (new StringBuilder(sub).reverse().toString().equals(sub)) {
+					max = len;
+					break;
+				}
+			}
+		}
+		return max;
+	}
+
+
 
 
 	
