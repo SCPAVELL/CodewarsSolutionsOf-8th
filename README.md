@@ -584,8 +584,7 @@
 
 [Leonardo Dicaprio and Oscars](https://www.codewars.com/kata/56d49587df52101de70011e4/solutions/java)
 
-	public static String leo(final int oscar)
-	  {
+	public static String leo(final int oscar){
 	    if (oscar == 88) {
 	      return "Leo finally won the oscar! Leo is happy";
 	    } else if (oscar == 86) {
@@ -596,6 +595,15 @@
 	      return "Leo got one already!";
 	    }
 	  }
+
+[Find the Integral](https://www.codewars.com/kata/59811fd8a070625d4c000013/train/java)
+
+ 	public static String integrate(int coefficient, int exponent) {
+		int i = exponent + 1;
+		String print = Integer.toString(coefficient / i);
+		return print + "x^" + i;
+	}
+
 
 
 	
