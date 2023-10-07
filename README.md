@@ -620,6 +620,29 @@
 		return max;
 	}
 
+ [Tribonacci Sequence](https://www.codewars.com/kata/556deca17c58da83c00002db/train/java)
+
+ 	public double[] tribonacci(double[] s, int n) {
+		if (s.length == 0 || n <= 0) {
+			return new double[0];
+		}
+		List<Double> resultList = new ArrayList<>();
+
+		if (n > 3) {
+			resultList.add(s[0]);
+			resultList.add(s[1]);
+			resultList.add(s[2]);
+			for (int i = 3; i < n; i++) {
+				double nextElement = resultList.get(i - 3) + resultList.get(i - 2) + resultList.get(i - 1);
+				resultList.add(nextElement);
+			}
+		} else {
+			for (int i = 0; i < n; i++) {
+				resultList.add(s[i]);
+			}
+		}
+		return resultList.stream().mapToDouble(j -> j).toArray();
+		}
 
 
 
