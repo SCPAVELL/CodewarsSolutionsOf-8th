@@ -658,4 +658,25 @@
 	}
 
 	
+[Convert string to camel case](https://www.codewars.com/kata/517abf86da9663f1d2000003/solutions/java)
+
+	static String toCamelCase(String s) {
+		StringBuilder result = new StringBuilder();
+		boolean capitalize = false;
+
+		for (char c : s.toCharArray()) {
+			if (c == '-' || c == '_') {
+				capitalize = true;
+			} else {
+				if (capitalize) {
+					c = Character.toUpperCase(c);
+					capitalize = false;
+				}
+
+				result.append(c);
+			}
+		}
+
+		return result.toString();
+	}
 
