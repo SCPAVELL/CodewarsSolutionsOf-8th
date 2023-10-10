@@ -680,3 +680,22 @@
 		return result.toString();
 	}
 
+[Digits explosion](https://www.codewars.com/kata/585b1fafe08bae9988000314/solutions/java)
+
+ 	public static String explode(String digits) {
+	    StringBuilder sb = new StringBuilder();
+	    for (int i = 0; i < digits.length(); ++i) {
+	      
+	      if (digits.substring(i, i + 1).equals("0")) {
+	        continue;
+	      }
+	      
+	      for (int j = 1; j <= Integer.valueOf(digits.substring(i, i + 1)); ++j) {
+	        sb.append(digits.charAt(i));
+	      }
+	      
+	    }
+	    
+	    return sb.toString();
+  		}
+
