@@ -699,3 +699,22 @@
 	    return sb.toString();
   		}
 
+[Palindrome Number](https://leetcode.com/problems/palindrome-number/description/)
+
+ 	public boolean isPalindrome(int x) {
+		int invert = 0;
+		int copyX = x;
+		
+		if (x < 0) {
+			return false;
+		} else if (x % 10 == 0 && x != 0) {
+			return false;
+		}else {
+			while(copyX != 0) {
+				invert = invert * 10 + copyX % 10;
+				copyX = copyX / 10;
+			}
+		}
+		return x == invert;
+		
+	}
