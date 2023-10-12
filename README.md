@@ -718,3 +718,19 @@
 		return x == invert;
 		
 	}
+
+ [1512. Number of Good Pairs](https://leetcode.com/problems/number-of-good-pairs/description/)
+
+ 	public int numIdenticalPairs(int[] nums) {
+		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+		int res = 0;
+		for (int num : nums) {
+			if (map.containsKey(num)) {
+				res += map.get(num);
+			}
+			map.put(num, map.getOrDefault(num, 0) + 1); 
+		}
+
+		return res;
+	}
+
