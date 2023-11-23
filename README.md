@@ -735,3 +735,14 @@
 		return res;
 	}
 
+ [From A to Z](https://www.codewars.com/kata/6512b3775bf8500baea77663/solutions/java)
+
+	public static String gimmeTheLetters(String s) {
+		StringBuilder string = new StringBuilder();
+		int firstCharCode = (int) s.charAt(0);
+		int lastCharCode = (int) s.charAt(2);
+		for (int i = firstCharCode; i <= lastCharCode; i++) {
+			string.append((char) i);
+		}
+		return string.toString();
+	}
