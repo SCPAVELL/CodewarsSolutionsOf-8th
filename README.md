@@ -746,3 +746,25 @@
 		}
 		return string.toString();
 	}
+
+
+ [Integers: Recreation One](https://www.codewars.com/kata/55aa075506463dac6600010d/train/java)
+
+	public static String listSquared(long m, long n) {
+			List<String> listSqu = new ArrayList<String>();
+			for (long i = m; i <= n; i++) {
+				int sum = 0;
+				for (int j = 1; j <= i; j++) {
+					if (i % j == 0) {
+						sum += Math.pow(j, 2);
+					}
+				}
+				if ((int) Math.sqrt(sum) == Math.sqrt(sum)) {
+					List a = new ArrayList();
+					a.add(i);
+					a.add(sum);
+					listSqu.add(a.toString());
+				}
+			}
+			return listSqu.toString();
+		}
