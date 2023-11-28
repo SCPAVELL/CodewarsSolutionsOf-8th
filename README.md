@@ -840,3 +840,27 @@ class GapInPrimes {
 		return primes;
 	}
 }
+
+
+ [Easy Line](https://www.codewars.com/kata/56e7d40129035aed6c000632/train/java)
+
+	BigInteger answer = BigInteger.valueOf(0);
+		for (int i = 0; i <= n; i++) {
+			answer = answer.add(binomi(n, i).pow(2));
+		}
+		return answer;
+	}
+
+	static BigInteger binomi(int n, int k) {
+		BigInteger res = BigInteger.valueOf(1);
+
+		if (k > n - k)
+			k = n - k;
+
+		for (int i = 0; i < k; ++i) {
+			res = res.multiply(BigInteger.valueOf(n - i));
+			res = res.divide(BigInteger.valueOf(i + 1));
+		}
+
+		return res;
+	}
