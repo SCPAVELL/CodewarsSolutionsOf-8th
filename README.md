@@ -82,7 +82,7 @@
 		}
 		return (int) Math.sqrt(sum) / 2;}
 
-
+ 
   [The Wide-Mouthed frog!](https://www.codewars.com/kata/57ec8bd8f670e9a47a000f89/solutions/java)
 
   	static String mouthSize(String animal) {
@@ -863,4 +863,15 @@ class GapInPrimes {
 		}
 
 		return res;
+	}
+
+
+[Maximum Product](https://www.codewars.com/kata/5a4138acf28b82aa43000117/solutions/java)
+
+	 public int adjacentElementsProduct(int[] array) {
+		int sum = Integer.MIN_VALUE;
+		for (int i = 0; i < array.length - 1; i++) {
+			sum = Math.max(sum, array[i] * array[i + 1]);
+		}
+		return sum;
 	}
