@@ -875,3 +875,17 @@ class GapInPrimes {
 		}
 		return sum;
 	}
+
+
+[V A P O R C O D E](https://www.codewars.com/kata/5966eeb31b229e44eb00007a/solutions/java)
+
+	public static String vaporcode(String s) {
+		String[] print = s.split("");
+		String sol = "";
+		for (int i = 0; i < print.length; i++) {
+			if (!print[i].matches(" ")) {
+				sol += print[i].toUpperCase() + "  ";
+			}
+		}
+		return sol.trim();
+	}
