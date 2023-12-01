@@ -889,3 +889,18 @@ class GapInPrimes {
 		}
 		return sol.trim();
 	}
+
+[N-Parasitic Numbers Ending in N](https://www.codewars.com/kata/55df87b23ed27f40b90001e5/solutions/java)
+
+
+	public static String calculateSpecial(int lastDigit, int radix) {
+		String xyz = "";
+		int divider = lastDigit * radix - 1;
+		int rest = lastDigit;
+		do {
+			rest *= radix;
+			xyz += Integer.toString(rest / divider, radix);
+			rest %= divider;
+		} while (rest != lastDigit);
+		return xyz;
+	}
