@@ -894,7 +894,6 @@ class GapInPrimes {
 
 [N-Parasitic Numbers Ending in N](https://www.codewars.com/kata/55df87b23ed27f40b90001e5/solutions/java)
 
-
 	public static String calculateSpecial(int lastDigit, int radix) {
 		String xyz = "";
 		int divider = lastDigit * radix - 1;
@@ -905,4 +904,26 @@ class GapInPrimes {
 			rest %= divider;
 		} while (rest != lastDigit);
 		return xyz;
+	}
+
+
+[What's a Perfect Power anyway?](https://www.codewars.com/kata/54d4c8b08776e4ad92000835/train/java)
+
+	public class PerfectPower {
+	  public static int[] isPerfectPower(int n) {
+	    int upperBound = (int)Math.sqrt(n);
+	    int tempN = n;
+	    int j = 0;
+	    for(int i = 2; i <= upperBound; i++) {
+	      while(tempN%i == 0 && tempN > 1) {
+	        tempN = tempN/i;
+	        j++;
+	      }
+	      if(tempN == 1) {return new int[] {i,j};}
+	      tempN = n;
+	      j = 0;
+	    }
+	    return null;
+	  
+	  }
 	}
