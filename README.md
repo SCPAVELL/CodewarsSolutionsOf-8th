@@ -910,20 +910,36 @@ class GapInPrimes {
 [What's a Perfect Power anyway?](https://www.codewars.com/kata/54d4c8b08776e4ad92000835/train/java)
 
 	public class PerfectPower {
-	  public static int[] isPerfectPower(int n) {
-	    int upperBound = (int)Math.sqrt(n);
-	    int tempN = n;
-	    int j = 0;
-	    for(int i = 2; i <= upperBound; i++) {
-	      while(tempN%i == 0 && tempN > 1) {
-	        tempN = tempN/i;
-	        j++;
-	      }
-	      if(tempN == 1) {return new int[] {i,j};}
-	      tempN = n;
-	      j = 0;
-	    }
-	    return null;
-	  
-	  }
+		public static int[] isPerfectPower(int n) {
+			int upperBound = (int) Math.sqrt(n);
+			int tempN = n;
+			int j = 0;
+			for (int i = 2; i <= upperBound; i++) {
+				while (tempN % i == 0 && tempN > 1) {
+					tempN = tempN / i;
+					j++;
+				}
+				if (tempN == 1) {
+					return new int[] { i, j };
+				}
+				tempN = n;
+				j = 0;
+			}
+			return null;
+
+		}
 	}
+
+[Unlucky Days](https://www.codewars.com/kata/56eb0be52caf798c630013c0/train/java)
+
+	public static int unluckyDays(int year) {
+			int days = 0;
+	
+			for (int i = 1; i < 13; i++) {
+				LocalDate date = LocalDate.of(year, i, 13);
+				if (date.getDayOfWeek().compareTo(DayOfWeek.FRIDAY) == 0) {
+					days++;
+				}
+			}
+			return days;
+		}
