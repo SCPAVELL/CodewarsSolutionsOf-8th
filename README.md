@@ -84,13 +84,15 @@
 			predict = (int) Math.pow(predict, 2);
 			sum += predict;
 		}
-		return (int) Math.sqrt(sum) / 2;}
+		return (int) Math.sqrt(sum) / 2;
+  }
 
  
   [The Wide-Mouthed frog!](https://www.codewars.com/kata/57ec8bd8f670e9a47a000f89/solutions/java)
 
   	static String mouthSize(String animal) {
-    	return animal.equalsIgnoreCase("alligator") ? "small" : "wide";  }
+    	return animal.equalsIgnoreCase("alligator") ? "small" : "wide";  
+     }
 
 
 [Area of a Circle](https://www.codewars.com/kata/537baa6f8f4b300b5900106c/train/java)
