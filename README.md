@@ -953,3 +953,15 @@ class GapInPrimes {
 			}
 			return days;
 		}
+
+
+[Did she say hallo?](https://www.codewars.com/kata/56a4addbfd4a55694100001f/train/java)
+
+	  public static boolean validateHello(String greetings) {
+			final String[] languages = new String[] { "hello", "ciao", "salut", "hallo", "hola", "ahoj", "czesc" };
+			for (String language : languages) {
+				if (greetings.toLowerCase().contains(language))
+					return true;
+			}
+			return false;
+		}
