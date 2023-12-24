@@ -965,3 +965,14 @@ class GapInPrimes {
 			}
 			return false;
 		}
+
+
+[extract portion of file name](https://www.codewars.com/kata/597770e98b4b340e5b000071/train/java)
+
+
+  	public static String extractFileName(String dirtyFileName) {
+		int underScore = dirtyFileName.indexOf("_");
+		int dot = dirtyFileName.lastIndexOf(".");
+
+		return dirtyFileName.substring(underScore + 1, dot);
+	}
