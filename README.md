@@ -181,7 +181,8 @@
 
   	static double areaOfPolygonInsideCircle(double circleRadius, int numberOfSides) {
 		double S = circleRadius * circleRadius / 2 * numberOfSides * Math.sin(Math.PI * 2 / numberOfSides);
-		return (double) Math.round(S * 1000) / 1000;}
+		return (double) Math.round(S * 1000) / 1000;
+  }
 
   [Consonant value](https://www.codewars.com/kata/59c633e7dcc4053512000073/train/java)
 
@@ -189,7 +190,8 @@
 		  return  Arrays.stream(s.split("[aeiou]+"))
 	                .mapToInt(t->t.chars().sum()-t.length()*96)
 	                .max()
-	                .getAsInt(); }
+	                .getAsInt(); 
+		 }
 
 [Persistent Bugger.](https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec/train/java)
 
