@@ -18,7 +18,7 @@
 		} else {
 			return fighter1.name;
 		}
-	} 
+	}
  }
  
 [Small enough? - Beginner](https://www.codewars.com/kata/57cc981a58da9e302a000214/train/java)
