@@ -986,4 +986,14 @@ class GapInPrimes {
 		}
 		return sum;
 	}
- 
+
+
+[Find the Slope](https://www.codewars.com/kata/55a75e2d0803fea18f00009d/solutions/java)
+
+	 public String slope(int[] points) {
+		try {
+			return "" + (points[3] - points[1]) / (points[2] - points[0]);
+		} catch (Exception e) {
+			return "undefined";
+		}
+	}
