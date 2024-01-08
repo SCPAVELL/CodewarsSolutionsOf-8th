@@ -1027,3 +1027,11 @@ class GapInPrimes {
 		return count;
 
 	}
+
+[DNA to RNA Conversion](https://www.codewars.com/kata/5556282156230d0e5e000089/train/java)
+
+	public String dnaToRna(String dna) {
+
+		String print = dna.replace("T", "U");
+		return print;
+	}
