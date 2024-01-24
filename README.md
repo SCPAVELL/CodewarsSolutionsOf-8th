@@ -1035,3 +1035,17 @@ class GapInPrimes {
 		String print = dna.replace("T", "U");
 		return print;
 	}
+
+
+[Help the Fruit Guy](https://www.codewars.com/kata/557af4c6169ac832300000ba/train/java)
+
+	public static String[] removeRotten(String[] fruitBasket) {
+	 
+	  if(fruitBasket == null || fruitBasket.length <= 0) return new String[0];
+	   
+	   for(int i = 0; i < fruitBasket.length; i++){
+	     fruitBasket[i] = fruitBasket[i].replaceAll("rotten", "").toLowerCase();
+	     }
+	   return fruitBasket;
+	 
+	 }
