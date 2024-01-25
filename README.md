@@ -1049,3 +1049,19 @@ class GapInPrimes {
 	   return fruitBasket;
 	 
 	 }
+
+
+[Row Weights](https://www.codewars.com/kata/5abd66a5ccfd1130b30000a9/train/java)
+
+	public static int[] rowWeights(final int[] weights) {
+		int a = 0;
+		int b = 0;
+		for (int i = 0; i < weights.length; i++) {
+			if (i % 2 == 0) {
+				a += weights[i];
+			} else {
+				b += weights[i];
+			}
+		}
+		return new int[] { a, b };
+	}
