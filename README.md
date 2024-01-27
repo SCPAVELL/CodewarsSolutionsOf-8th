@@ -1065,3 +1065,20 @@ class GapInPrimes {
 		}
 		return new int[] { a, b };
 	}
+
+
+[Basic subclasses - Adam and Eve](https://www.codewars.com/kata/547274e24481cfc469000416/train/java)
+
+	static Human[] create() {
+		return new Human[] { new Man(), new Woman() };
+	}
+	}
+	
+	interface Human {
+	}
+	
+	class Man implements Human {
+	}
+	
+	class Woman implements Human {
+	}
