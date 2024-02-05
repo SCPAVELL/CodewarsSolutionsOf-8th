@@ -111,7 +111,7 @@
  	static String greet(String name) {
 		String print = name.toLowerCase();
 		return "Hello " + print.substring(0, 1).toUpperCase() + print.substring(1) + "!";
-  }
+  	}
 
 
 [Find the next perfect square!](https://www.codewars.com/kata/56269eb78ad2e4ced1000013/train/java)
@@ -149,7 +149,8 @@
 
   	static String camelCase(String input) {
 		String[] r = input.split("(?=\\p{Upper})");
-		return (String.join(" ", r));}
+		return (String.join(" ", r));
+  }
 
 [Welcome!](https://www.codewars.com/kata/577ff15ad648a14b780000e7/train/java)
 
