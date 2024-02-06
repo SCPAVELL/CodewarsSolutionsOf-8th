@@ -1097,3 +1097,14 @@ class GapInPrimes {
 	        
 	        return sum == number ? "Disarium !!" : "Not !!"; 
 	    }
+
+[The old switcheroo](https://www.codewars.com/kata/55d410c492e6ed767000004f/solutions)
+
+	public static String vowel2Index(String s) {
+	      StringBuilder sb = new StringBuilder();
+	      for (int i = 0; i < s.length(); i++) {
+	        if ("aeiouAEIOU".indexOf(s.charAt(i)) == -1) sb.append(s.charAt(i));
+	        else sb.append(i + 1);
+	      }
+	      return sb.toString();
+	  }
