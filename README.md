@@ -1210,5 +1210,15 @@ class GapInPrimes {
 			for (String s : keys)
 				nPresses += s.indexOf(c) + 1;
 		return nPresses;
-
 	}
+
+[Number of People in the Bus](https://www.codewars.com/kata/5648b12ce68d9daa6b000099/train/java)
+
+	public static int countPassengers(ArrayList<int[]> stops) {
+	    int result = 0;
+		 for(int i = 0; i < stops.size();i++) {
+			 result += stops.get(i)[0];
+			 result -= stops.get(i)[1];
+    		}
+		 return result;
+	  }
