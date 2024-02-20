@@ -1222,3 +1222,17 @@ class GapInPrimes {
     		}
 		 return result;
 	  }
+
+
+[Color Ghost](https://www.codewars.com/kata/5648b12ce68d9daa6b000099/GHOST/java)
+
+	private String[] m_colorCodes = new String[]{"white" , "yellow" , "purple" , "red"};
+		private String m_color = "";
+		
+		public Ghost(){
+			m_color = m_colorCodes[new Random().nextInt(m_colorCodes.length)];
+		}
+		
+		public String getColor(){
+			return m_color;
+		}
