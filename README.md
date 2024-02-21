@@ -20,13 +20,6 @@
 	}
  }
  
-[Small enough? - Beginner](https://www.codewars.com/kata/57cc981a58da9e302a000214/train/java)
-
-  	static boolean smallEnough(int[] a, int limit){
-	    Arrays.sort(a);
-	    return a[a.length-1] <= limit;
-     }
-
 
 [Grasshopper - Check for factor](https://www.codewars.com/kata/55cbc3586671f6aa070000fb/train/java)
 
