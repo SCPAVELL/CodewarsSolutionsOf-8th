@@ -53,12 +53,7 @@
   }
 
 
-   [Find the unique number](https://www.codewars.com/kata/585d7d5adb20cf33cb000235/train/java)
-   
-	static double findUniq(double arr[]) {
-		Arrays.sort(arr);
-		return arr[0] == arr[1] ? arr[arr.length - 1] : arr[0];
-  }
+
 
   [Predict your age!](https://www.codewars.com/kata/5aff237c578a14752d0035ae/train/java)
 
