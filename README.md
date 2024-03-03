@@ -166,24 +166,6 @@
 		return (double) Math.round(S * 1000) / 1000;
   }
 
-  [Consonant value](https://www.codewars.com/kata/59c633e7dcc4053512000073/train/java)
-
-  	static int solve(final String s) {
-		  return  Arrays.stream(s.split("[aeiou]+"))
-	                .mapToInt(t->t.chars().sum()-t.length()*96)
-	                .max()
-	                .getAsInt(); 
-		 }
-
-
-
-	public static long getMultiplyOfDigits(long n) {
-		int result = (int) n % 10;
-
-		while ((n /= 10) > 0) {
-			result *= n % 10;
-		}
-		return result;}
 
   [Alphabet war](https://www.codewars.com/kata/59377c53e66267c8f6000027/train/java)
 
