@@ -207,15 +207,6 @@
    	 return "Position of alphabet: " + ((int) alphabet - 96); }
 
 
- [Factorial](https://www.codewars.com/kata/57a049e253ba33ac5e000212/solutions/java)
-
- 	public static long factorial(int n) {
-		long result = 1;
-		for (int i = 1; i <= n; i++) {
-			result = result * i;
-		}
-		return result;}
-
 
   [Number of Decimal Digits](https://www.codewars.com/kata/58fa273ca6d84c158e000052/train/java)
 
