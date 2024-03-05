@@ -76,15 +76,6 @@
      }
 
 
-[Area of a Circle](https://www.codewars.com/kata/537baa6f8f4b300b5900106c/train/java)
-
-    	static double area(double radius) {
-		if (radius > 0) {
-			return Math.PI * Math.pow(radius, 2);
-		} else {
-			throw new IllegalArgumentException();
-   	}
-   }
 
 [Greet Me](https://www.codewars.com/kata/535474308bb336c9980006f2/train/java)
 
