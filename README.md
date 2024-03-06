@@ -116,12 +116,7 @@
 			min += passed[i] * passed[passed.length - 1 - i];
 		return min;}
 
-  [Break camelCase](https://www.codewars.com/kata/5208f99aee097e6552000148/train/java)
-
-  	static String camelCase(String input) {
-		String[] r = input.split("(?=\\p{Upper})");
-		return (String.join(" ", r));
-  }
+ 
 
 [Welcome!](https://www.codewars.com/kata/577ff15ad648a14b780000e7/train/java)
 
