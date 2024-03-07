@@ -184,7 +184,8 @@
 			return "Right side wins!";
 		} else {
 			return "Let's fight again!";
-		}}
+		}
+  }
 
 
   [Find the position!](https://www.codewars.com/kata/5808e2006b65bff35500008f/solutions/java)
