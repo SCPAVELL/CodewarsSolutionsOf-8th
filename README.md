@@ -44,16 +44,6 @@
 
 
 
-  [Descending Order](https://www.codewars.com/kata/5467e4d82edf8bbf40000155/train/java)
-  
-  	static int sortDesc(final int num) {
-		String array[] = String.valueOf(num).split("");
-		Arrays.sort(array, Collections.reverseOrder());
-		return Integer.valueOf(String.join("", array));
-  }
-
-
-
 
   [Predict your age!](https://www.codewars.com/kata/5aff237c578a14752d0035ae/train/java)
 
