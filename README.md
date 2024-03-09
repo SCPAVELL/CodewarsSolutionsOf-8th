@@ -59,11 +59,6 @@
   }
 
  
-  [The Wide-Mouthed frog!](https://www.codewars.com/kata/57ec8bd8f670e9a47a000f89/solutions/java)
-
-  	static String mouthSize(String animal) {
-    	return animal.equalsIgnoreCase("alligator") ? "small" : "wide";  
-     }
 
 
 
