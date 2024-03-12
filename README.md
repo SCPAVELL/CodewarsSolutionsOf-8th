@@ -61,15 +61,6 @@
  
 
 
-
-[Greet Me](https://www.codewars.com/kata/535474308bb336c9980006f2/train/java)
-
- 	static String greet(String name) {
-		String print = name.toLowerCase();
-		return "Hello " + print.substring(0, 1).toUpperCase() + print.substring(1) + "!";
-  	}
-
-
 [Find the next perfect square!](https://www.codewars.com/kata/56269eb78ad2e4ced1000013/train/java)
 
 	static long findNextSquare(long sq) {
