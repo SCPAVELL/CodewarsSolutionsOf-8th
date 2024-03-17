@@ -129,41 +129,6 @@
   }
 
 
-  [Alphabet war](https://www.codewars.com/kata/59377c53e66267c8f6000027/train/java)
-
-  	static String alphabetWar(String fight) {
-		int sumLeft = 0;
-		int sumRight = 0;
-		String[] num = fight.split("");
-
-		for (int i = 0; i < num.length; i++) {
-			if (num[i].equals("w")) {
-				sumLeft += 4;
-			} else if (num[i].equals("p")) {
-				sumLeft += 3;
-			} else if (num[i].equals("b")) {
-				sumLeft += 2;
-			} else if (num[i].equals("s")) {
-				sumLeft += 1;
-			} else if (num[i].equals("m")) {
-				sumRight += 4;
-			} else if (num[i].equals("q")) {
-				sumRight += 3;
-			} else if (num[i].equals("d")) {
-				sumRight += 2;
-			} else if (num[i].equals("z")) {
-				sumRight += 1;
-			}}
-		if (sumLeft > sumRight) {
-			return "Left side wins!";
-		} else if (sumLeft < sumRight) {
-			return "Right side wins!";
-		} else {
-			return "Let's fight again!";
-		}
-  }
-
-
   [Find the position!](https://www.codewars.com/kata/5808e2006b65bff35500008f/solutions/java)
 
   	static String position(char alphabet){
