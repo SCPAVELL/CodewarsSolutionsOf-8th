@@ -21,15 +21,6 @@
  }
  
 
- [Grasshopper - Array Mean](https://www.codewars.com/kata/55d277882e139d0b6000005d/train/java)
-
-	static int findAverage(int[] nums) {
-		int sum = 0;
-		for (int i = 0; i < nums.length; i++) {
-			sum += nums[i];
-		}
-		return sum / nums.length;
-  }
 
 [The Supermarket Queue](https://www.codewars.com/kata/57b06f90e298a7b53d000a86/solutions/java)
 
