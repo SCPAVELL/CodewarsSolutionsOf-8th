@@ -112,14 +112,6 @@
 		return map.get("english");}
 
 
-  [Calculate the area of a regular n sides polygon inside a circle of radius r](https://www.codewars.com/kata/5a58ca28e626c55ae000018a/train/java)
-
-  	static double areaOfPolygonInsideCircle(double circleRadius, int numberOfSides) {
-		double S = circleRadius * circleRadius / 2 * numberOfSides * Math.sin(Math.PI * 2 / numberOfSides);
-		return (double) Math.round(S * 1000) / 1000;
-  }
-
-
   [Find the position!](https://www.codewars.com/kata/5808e2006b65bff35500008f/solutions/java)
 
   	static String position(char alphabet){
