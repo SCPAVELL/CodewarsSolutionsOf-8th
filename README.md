@@ -1169,4 +1169,169 @@ class GapInPrimes {
 		}
 	}
 
-   
+
+
+   [Line Safari - Is that a line?](https://www.codewars.com/kata/59c5d0b0a25c8c99ca000237/train/java)
+
+	import java.util.*;
+	import java.util.stream.*;
+	import java.awt.Point;
+	
+	public class Dinglemouse {
+
+	/*
+	 * **************** * HELPER CLASS * ****************
+	 */
+	private static class Pos extends Point {
+		protected Pos(int x, int y) {
+			super(x, y);
+		}
+
+		protected Pos(Pos p) {
+			super(p);
+		}
+
+		protected Pos add(Pos p) {
+			return new Pos(x + p.x, y + p.y);
+		}
+
+		protected boolean isVert() {
+			return y == 0;
+		}
+
+		protected char getChar() {
+			return posSet.contains(this) ? g[x][y] : 'Z';
+		}
+
+		protected boolean isValidComingFrom(Pos move) {
+			char c = getChar();
+			return c == '-' && move.x == 0 || c == '|' && move.y == 0 || c == 'X' || c == '+';
+		}
+
+		@Override
+		public String toString() {
+			return String.format("(%d,%d)", x, y);
+		}
+	}
+	/* **************** */
+
+	private static Pos[] MOVES = Arrays
+			.stream(new int[][] { new int[] { -1, 0 }, new int[] { 1, 0 }, new int[] { 0, 1 }, new int[] { 0, -1 } })
+			.map(p -> new Pos(p[0], p[1])).toArray(Pos[]::new);
+
+	private static Map<Boolean, List<Pos>> TURNS = new HashMap<Boolean, List<Pos>>() {
+		{
+			put(false, Arrays.asList(new Pos(1, 0), new Pos(-1, 0))); // move is horizontal => go up or down
+			put(true, Arrays.asList(new Pos(0, 1), new Pos(0, -1))); // move is verical => go left or right
+		}
+	};
+
+	private static char[][] g;
+	private static List<Pos> startEnd;
+	private static Set<Pos> posSet;
+
+	public static boolean line(final char[][] grid) {
+
+		g = grid;
+		posSet = new HashSet<Pos>();
+		startEnd = new ArrayList<Pos>();
+
+		for (int x = 0; x < grid.length; x++)
+			for (int y = 0; y < grid[x].length; y++) {
+				Pos p = new Pos(x, y);
+				if (g[x][y] == 'X')
+					startEnd.add(p);
+				if ("-|+X".contains("" + g[x][y]))
+					posSet.add(p);
+			}
+
+		boolean isValidPath = startEnd.size() == 2; // Two and only Two 'X' (already required by the description,
+													// but...)
+		if (isValidPath) {
+			for (int i = 0; i < 2; i++) { // Check coming from one point and the other at the second iteration
+				Collections.reverse(startEnd); // Invert the starting and ending points
+				isValidPath = seekPath();
+				if (isValidPath)
+					break;
+			}
+		}
+		return isValidPath;
+	}
+
+	private static boolean seekPath() {
+
+		Set<Pos> validPosSet = new HashSet<Pos>(); // Set of all the positions that will be contained in the valid path
+													// (possibly) found
+		Stack<Pos> queue = new Stack<Pos>(), // Store the position of the corners
+				whichDir = new Stack<Pos>(), // Store the direction to use to do the next step, coming from the position
+												// in "queue" at the same level in the stack
+				localPath = new Stack<Pos>(); // Collect the current path (backtracking)
+
+		int count = 0; // Number of valid paths found
+
+		Pos fromPos = new Pos(startEnd.get(0)), move = null;
+
+		for (Pos m : MOVES)
+			if (fromPos.add(m).isValidComingFrom(m))
+				if (move != null)
+					return false; // Line is invalid because amibguous
+				else
+					move = new Pos(m); // Store the direction along which to move
+
+		validPosSet.add(fromPos);
+		whichDir.push(move);
+		queue.push(fromPos);
+		localPath.push(fromPos);
+
+		if (move != null) {
+
+			while (!queue.isEmpty() && count < 2) {
+
+				fromPos = queue.pop();
+				move = whichDir.pop();
+
+				final Pos pos = fromPos.add(move);
+				final char posChar = pos.getChar();
+
+				while (!localPath.peek().equals(fromPos))
+					localPath.pop(); // Track back the correct point in the local path
+
+				if (validPosSet.contains(pos) || localPath.contains(pos)) // Cannot traverse two times the same position
+																			// (would mean 2 valid paths, which is not
+																			// allowed)
+					continue;
+
+				localPath.push(pos);
+
+				if (posChar == 'X') {
+					count++; // Update the number of valid paths found
+					validPosSet.addAll(localPath); // Archive the positions in the grid of this valid path
+
+				} else if (posChar == '-' || posChar == '|') {
+					if (pos.isValidComingFrom(move)) { // Go ahead only if next char in the grid is valid
+						queue.push(pos);
+						whichDir.push(move);
+					}
+
+				} else if (posChar == '+') { // Accumulate the directions/informations to check when a corner is
+												// found...
+					List<Pos> virageDeLaMort = TURNS.get(move.isVert()).stream().filter(p -> {
+						Pos np = pos.add(p);
+						return !localPath.contains(np) && np.isValidComingFrom(p);
+					}).collect(Collectors.toList());
+					if (virageDeLaMort.size() == 1) { // Add to the queue only when the turn is fully determined (<=> on
+														// direction possible or the second one has already been
+														// traversed and so isn't "reachable" anymore)
+						queue.push(pos);
+						whichDir.push(virageDeLaMort.get(0));
+					}
+				}
+			}
+		}
+		return count == 1 && posSet.stream().filter(p -> !validPosSet.contains(p)).count() == 0; // Found only one valid
+																									// path and all the
+																									// characters of the
+																									// grid have been
+																										// traversed
+		}
+	}
