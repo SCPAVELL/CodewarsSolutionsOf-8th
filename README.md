@@ -52,14 +52,6 @@
  
 
 
-[Find the next perfect square!](https://www.codewars.com/kata/56269eb78ad2e4ced1000013/train/java)
-
-	static long findNextSquare(long sq) {
-		long root = (long) Math.sqrt(sq);
-		return root * root == sq ? (root + 1) * (root + 1) : -1;
-  }
-
-
   [Most digits](https://www.codewars.com/kata/58daa7617332e59593000006/solutions/java)
 
   	static int findLongest(int[] numbers) {
