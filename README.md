@@ -67,15 +67,6 @@
 	    return nb;
      }
 
-[Minimize Sum Of Array (Array Series #1)](https://www.codewars.com/kata/5a523566b3bfa84c2e00010b/solutions)
-
-      static int minSum(int[] passed) {
-		int min = 0;
-		for (int i = 0; i < passed.length / 2; i++)
-			min += passed[i] * passed[passed.length - 1 - i];
-		return min;}
-
- 
 
 [Welcome!](https://www.codewars.com/kata/577ff15ad648a14b780000e7/train/java)
 
