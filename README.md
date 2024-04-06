@@ -84,11 +84,6 @@
 		}
 		return sum;}
 
-  [Thinkful - Number Drills: Blue and red marbles](https://www.codewars.com/kata/5862f663b4e9d6f12b00003b/train/java)
-
-  	public static double guessBlue(int blueStart, int redStart, int bluePulled, int redPulled) {
-		return (double)(blueStart - bluePulled) / (redStart - redPulled + blueStart - bluePulled); }
-
 
   [Lario and Muigi Pipe Problem](https://www.codewars.com/kata/56b29582461215098d00000f/train/java)
 
