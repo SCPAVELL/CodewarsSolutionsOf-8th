@@ -63,12 +63,6 @@
 
 
 
-  [Find the position!](https://www.codewars.com/kata/5808e2006b65bff35500008f/solutions/java)
-
-  	static String position(char alphabet){
-   	 return "Position of alphabet: " + ((int) alphabet - 96); }
-
-
   [Sum of a sequence](https://www.codewars.com/kata/586f6741c66d18c22800010a/train/java)
   
 	public static int sequenceSum(int start, int end, int step) {
