@@ -70,7 +70,8 @@
 		for (int i = start; i <= end; i += step) {
 			sum += i;
 		}
-		return sum;}
+		return sum;
+  }
 
 
   [Lario and Muigi Pipe Problem](https://www.codewars.com/kata/56b29582461215098d00000f/train/java)
