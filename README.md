@@ -43,8 +43,7 @@
 			predict = (int) Math.pow(predict, 2);
 			sum += predict;
 		}
-		return (int) Math.sqrt(sum) / 2;
-  }
+		return (int) Math.sqrt(sum) / 2; }
 
   [Most digits](https://www.codewars.com/kata/58daa7617332e59593000006/solutions/java)
 
