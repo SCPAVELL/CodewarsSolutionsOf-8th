@@ -21,18 +21,6 @@
  }
  
 
-
-[The Supermarket Queue](https://www.codewars.com/kata/57b06f90e298a7b53d000a86/solutions/java)
-
-	static int solveSuperMarketQueue(int[] customers, int n) {
-		int[] result = new int[n];
-		  for(int i = 0; i < customers.length; i++){
-	    	result[0] += customers[i];
-	    	Arrays.sort(result);
-	    }
-		  return result[n-1];
-    }
-
   [Predict your age!](https://www.codewars.com/kata/5aff237c578a14752d0035ae/train/java)
 
   	static int predictAge(int age1, int age2, int age3, int age4, int age5, int age6, int age7, int age8) {
