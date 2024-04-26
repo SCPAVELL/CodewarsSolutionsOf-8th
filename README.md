@@ -100,7 +100,8 @@
 		for (int i = 0; i < n; i++) {
 			s = s.replaceFirst("!", "");
 		}
-		return s;}
+		return s;
+  }
 
   
   
