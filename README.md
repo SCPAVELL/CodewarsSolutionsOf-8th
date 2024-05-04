@@ -72,7 +72,9 @@
 				count += rv;
 			}
 		}
-		return count;}}
+		return count;
+  		}
+  	}
 
 
 [Filter the number](https://www.codewars.com/kata/55b051fac50a3292a9000025/train/java)
