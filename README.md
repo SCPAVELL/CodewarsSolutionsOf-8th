@@ -94,7 +94,8 @@
 			sb.append(last);
 			last = last == 0 ? 1 : 0;
 		}
-		return sb.toString();}
+		return sb.toString();
+  }
 
 
  [Exclamation marks series #6: Remove n exclamation marks in the sentence from left to right](https://www.codewars.com/kata/57faf7275c991027af000679/train/java)
@@ -113,7 +114,8 @@
 	public static int maxDiff(int[] lst) {
 	    if (lst.length<2) return 0;
 	    java.util.Arrays.sort(lst);
-	    return lst[lst.length-1] - lst[0];  }
+	    return lst[lst.length-1] - lst[0]; 
+     }
 
 
 [Equal Sides Of An Array](https://www.codewars.com/kata/5679aa472b8f57fb8c000047/train/java)
