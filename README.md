@@ -95,7 +95,8 @@
 			sb.append(last);
 			last = last == 0 ? 1 : 0;
 		}
-		return sb.toString();}
+		return sb.toString();
+  }
 
 
  [Exclamation marks series #6: Remove n exclamation marks in the sentence from left to right](https://www.codewars.com/kata/57faf7275c991027af000679/train/java)
@@ -104,7 +105,8 @@
 		for (int i = 0; i < n; i++) {
 			s = s.replaceFirst("!", "");
 		}
-		return s;}
+		return s;
+  }
 
   
   
