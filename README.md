@@ -265,9 +265,7 @@
 	          highScore = score;
 	        }
 	    }
-	    
-	    return winner;
-	  }
+	    return winner;}
 
 [Pythagorean Triple](https://www.codewars.com/kata/5951d30ce99cf2467e000013/train/java)
 
