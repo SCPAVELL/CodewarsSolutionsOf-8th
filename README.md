@@ -72,10 +72,11 @@
 			rv = (int) Math.pow(arr[i], 3);
 			if (rv % 2 != 0) {
 				count += rv;
-			}}
+			}
+   		}
 		return count;
   		}
-    }
+   	 }
 
 
 [Filter the number](https://www.codewars.com/kata/55b051fac50a3292a9000025/train/java)
