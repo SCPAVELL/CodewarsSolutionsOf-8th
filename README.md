@@ -46,8 +46,7 @@
 	        nb = numbers[i];
 	      }
 	    }
-	    return nb;
-     }
+	    return nb;}
 
   [Lario and Muigi Pipe Problem](https://www.codewars.com/kata/56b29582461215098d00000f/train/java)
 
