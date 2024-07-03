@@ -17,8 +17,8 @@
 			return fighter2.name;
 		} else {
 			return fighter1.name;  
-   		}
-   }}
+   		}}
+   }
  
 
   [Predict your age!](https://www.codewars.com/kata/5aff237c578a14752d0035ae/train/java)
