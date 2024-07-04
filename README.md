@@ -17,7 +17,8 @@
 			return fighter2.name;
 		} else {
 			return fighter1.name;  
-   		}}
+   		}
+     }
    }
  
 
