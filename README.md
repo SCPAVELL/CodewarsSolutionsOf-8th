@@ -1246,3 +1246,13 @@ class GapInPrimes {
 																										// traversed
 		}
 	}
+
+
+	 public class LineNumbering {
+	    public static List<String> number(List<String> lines) {
+	        for (int i = 0; i < lines.size(); i++) {
+	            lines.set(i, String.format("%d: %s", i + 1, lines.get(i)));
+	        }
+	        return lines;
+	}
+	}
