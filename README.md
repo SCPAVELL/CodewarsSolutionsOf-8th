@@ -1256,3 +1256,19 @@ class GapInPrimes {
 	        return lines;
 	}
 	}
+
+
+	public class Calculator
+	{
+	  public static Double calculate(final double numberOne, final String operation, final double numberTwo)
+	  {
+	    if (numberTwo == 0 && operation == "/") return null;
+	        switch (operation) {
+	            case "+": return numberOne + numberTwo + 0.0;
+	            case "-": return numberOne - numberTwo + 0.0;
+	            case "*": return numberOne * numberTwo + 0.0;
+	            case "/": return numberOne / numberTwo + 0.0;
+	            default: return null;
+	        }
+	  }
+}
